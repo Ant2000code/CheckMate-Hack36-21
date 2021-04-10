@@ -7,24 +7,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+    <!-- <link href="{%static 'cs2.css'}" rel="stylesheet" > -->
+    <style>
+        body {
+          background-image: url("/static/textarea.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+
+
+
 </head>
 <body>
     {% if user.is_authenticated %}
-    <h2>{{room_name}}</h2>
+    <h2 style="border-width: thick;margin-left: 100px;color: aliceblue;margin-left: 635px;">{{room_name}}</h2>
     <br>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br>
-    <div class="form-floating mb-3">
+    <textarea id="chat-log" cols="100" rows="15" style=" margin-left: 310px;"></textarea><br>
+
+    <div class="form-floating mb-3" style=" margin-left: 310px;">
         <input id="chat-message-input" type="text" size="100" ><br>
     </div>
     
-    <div class="form-floating mb-3">
-        <input id="chat-message-submit" type="button" value="Send">
+    <div class="form-floating mb-3" style="border-width: thick; margin-left: 310px;">
+         
+        <input id="chat-message-submit" type="button" class="btn btn-light" value="Send">
     </div>
     
     {{ room_name|json_script:"room-name" }}
     
     {% csrf_token %}
-    <a href="/account/logout">logout</a>
+    <a href="/account/logout" type="button" class="btn btn-light" style="margin-left: 310px;" >logout</a>
     {% else %}
     <h1>Don't you dare.</h1>
     {% endif %}

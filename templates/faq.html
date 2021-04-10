@@ -1,0 +1,128 @@
+<html>
+   {% load static %}
+
+   <head>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+      <link rel="stylesheet" href="{% static 'faq.css'%}">
+      <style>
+         body {
+     margin: 0;
+      font-family: calibri;
+    background-image: url("/static/faq.png") ;
+    background-size: cover;
+    background-blend-mode: overlay;
+
+}
+      </style>
+   </head>
+<body>
+
+<div class="content-wrap">
+<h1 class="main-heading">FAQ</h1>
+<hr>
+
+
+<div class="container">
+  <!--Tab Wrapper-->
+  <div class="accordian-block">
+     <div class="ac-title" data-in="#tab1" >
+        <div class="plus-icon" style="background-color: rgb(38, 125, 128);"></div>
+        <p><b>What is the purpose of this site?</b></p>
+          </div>
+     <div class="accordian-para acc-show" id="tab1" >
+        <p class="commn-para-lg"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie ipsum quam, et iaculis nibh
+           pellentesque vel. Interdum et malesuada fames ac ante ipsum primis in faucibus.</b>
+        </p>
+     </div>
+  </div>
+  <!--Tab Wrapper close-->
+  <!--Tab Wrapper-->
+  <div class="accordian-block">
+   <div class="ac-title" data-in="#tab1" >
+      <div class="plus-icon" style="background-color: rgb(38, 125, 128);"></div>
+      <p><b>Can I send private messages to other users?</b></p>
+        </div>
+   <div class="accordian-para acc-show" id="tab1" >
+      <p class="commn-para-lg"><b>Yep! users can conduct private conversations and private video calls with other users.</b>
+      </p>
+   </div>
+</div>
+  <!--Tab Wrapper close-->     
+  <!--Tab Wrapper-->
+  <div class="accordian-block">
+   <div class="ac-title" data-in="#tab1" >
+      <div class="plus-icon" style="background-color: rgb(38, 125, 128);"></div>
+      <p><b>What is the purpose of this site?</b></p>
+        </div>
+   <div class="accordian-para acc-show" id="tab1" >
+      <p class="commn-para-lg"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie ipsum quam, et iaculis nibh
+         pellentesque vel. Interdum et malesuada fames ac ante ipsum primis in faucibus.</b>
+      </p>
+   </div>
+</div>
+        <!--Tab Wrapper close-->   
+        
+        <!--Tab Wrapper-->
+        <div class="accordian-block">
+         <div class="ac-title" data-in="#tab1" >
+            <div class="plus-icon" style="background-color: rgb(38, 125, 128);"></div>
+            <p><b>What is the purpose of this site?</b></p>
+              </div>
+         <div class="accordian-para acc-show" id="tab1" >
+            <p class="commn-para-lg"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie ipsum quam, et iaculis nibh
+               pellentesque vel. Interdum et malesuada fames ac ante ipsum primis in faucibus.</b>
+            </p>
+         </div>
+      </div>
+        <!--Tab Wrapper close-->   
+
+        <!--Tab Wrapper-->
+        <div class="accordian-block">
+         <div class="ac-title" data-in="#tab1" >
+            <div class="plus-icon" style="background-color: rgb(38, 125, 128);"></div>
+            <p><b>What is the purpose of this site?</b></p>
+              </div>
+         <div class="accordian-para acc-show" id="tab1" >
+            <p class="commn-para-lg"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie ipsum quam, et iaculis nibh
+               pellentesque vel. Interdum et malesuada fames ac ante ipsum primis in faucibus.</b>
+            </p>
+         </div>
+      </div>
+        <!--Tab Wrapper close-->   
+</div>
+
+
+
+</div>
+</body>
+</html>
+<script>
+    
+
+
+
+    function reset_acc() {
+         $('.ac-title').removeClass('acc-active');
+         $('.accordian-para').slideUp();
+         $('.plus-icon').removeClass('cross-icon');
+         }
+         $('.ac-title').click(function (e) {
+         e.preventDefault();
+         if ($(this).hasClass('acc-active'))
+         {
+         reset_acc();
+         }
+         else {
+         reset_acc();
+         var getID = $(this).attr('data-in');
+         $(getID).slideDown();
+         $(this).addClass('acc-active');
+         $(this).find('.plus-icon').addClass('cross-icon');
+         }
+         });
+
+        
+
+</script>

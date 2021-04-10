@@ -99,8 +99,8 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #0C264E;
-    background: #15396A;
+    border: 1px solid #0c3b4e;
+    background: #0c3b4e;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -119,8 +119,8 @@ button:focus {
 }
 
 button.ghost {
-    background: #15396A;
-    border-color: #ff;
+    background:#0c3b4e;
+    border-color: #fff;
 }
 
 .form-container {

@@ -1,17 +1,28 @@
+{% load static %}
+<body>
+<link rel="stylesheet" href="{% static 'scramble.css' %}">
+
+<div class="game">
+
 <br>
 <br>
-score:{{score}}/{{total}}
+	<div class="score">
+Score: {{score}}/{{total}}
+		</div>
 <br>
 <br>
-{{jum_word}}
+	<div class="words">{{jum_word}}</div>
 <br>
 <br>
 <form action="{% url 'check' %}" method="post">
 	{% csrf_token %}
-	<input type="text" name="answer" placeholder="Answer">
-	<button type="submit">Check</button>
+	<input class="answer" type="text" name="answer" placeholder="Answer" >
+	<button class="button" type="submit">Check</button>
 </form>
-<a class="btn btn-info" href="{% url 'next' %}" role="button">Next</a>
+<a class="button" href="{% url 'next' %}" role="button">Next</a>
 <br>
 <br>
 {{ msg }}
+
+	</div>
+</body>

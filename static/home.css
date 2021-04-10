@@ -125,8 +125,8 @@ body {
 
 .main-cards {
   column-count: 1;
-  column-gap: 20px;
-  margin: 20px;
+  column-gap: 30px;
+  margin: 30px;
 }
 
 .card {
@@ -134,7 +134,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #15396A;
+  background-color:rgb(46, 46, 146) ;
   margin-bottom: 20px;
   -webkit-column-break-inside: avoid;
   padding: 24px;
@@ -183,7 +183,7 @@ body {
 
 /*navbar*/
 .nav {
-  background: #0C264E;
+  background: #0c4455;
   height: 60px; /* set same as height & line-height below */
   width: 100%;
   padding: 0;

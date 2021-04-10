@@ -1,61 +1,81 @@
+ <html>
  {% load static %}
+ <head>
+  <link rel="stylesheet" href="{% static 'home.css' %}">
 
- <link rel="stylesheet" href="{% static 'home.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+   body {
+     margin: 0;
+      font-family: calibri;
+    background-image: url("/static/bg3.jpg") ;
+    
+    background-size: cover;
+    background-blend-mode: overlay;
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+}
+</style>
+
+ </head>
+ <body>
+
+ 
  <div class="nav">
 
-	<ul>
-    <li><a href="#" class="nav-link">Home</a></li>
-    <li><a href="/about" class="nav-link">About</a></li>
-    <li><a href="#" class="nav-link">FAQ</a></li>
+	<ul style="background-color:  #0c4455;">
+    
+    
+    <li><a href="/faq" class="nav-link">FAQ</a></li>
     <li><a href="/contactus" class="nav-link">Contact Us</a></li>
-    {% if user.is_authenticated %}
+    
     <li><a href="/account/logout" class="nav-link">Logout</a></li>
-    {% else %}
-    <li><a href="/account/login" class="nav-link">Login</a></li>
-    <li><a href="/account/signup" class="nav-link">Signup</a></li>
-    {% endif %}
+    
+    
 	<!--<a class="navbar-brand" href="#">
     <img style="width:40px;" src="{% static 'logo1.png' %}">
 	</a> -->
 		</ul>
 </div>
 
-<div class="grid-container">
-
-
-    <main class="main">
-    <div class="main-header">
-      <div class="main-header__heading">Hello User</div>
-      <div class="main-header__updates">Recent Items</div>
-    </div>
-
-    {% if user.is_authenticated %}
+    <img src="{% static 'logo.png'%}" style="width: 400px; margin-left: 500px;">
     <div class="main-overview">
       <div class="overviewcard">
-        <div class="overviewcard__icon"><a href="/Call">One-To-One Call</a></div>
+        <div class="overviewcard__icon"><a  style="text-decoration: none; font-size: 40px; color: white;" href="/Call"><b>One-To-One Call</b></a></div>
       </div>
      
       <div class="overviewcard">
-        <div class="overviewcard__icon"><a href="/chat/lobby">Public Chat</a></div>
+        <div class="overviewcard__icon"><a   style="text-decoration: none; font-size: 40px; color: white;"       href="/chat/lobby"><b>Public Chat</b></a></div>
       </div>
       <div class="overviewcard">
-        <div class="overviewcard__icon"><a href="/chat">Create or join a private room</a></div>
+        <div class="overviewcard__icon"><a  style="text-decoration: none; font-size: 40px; color: white;"  href="/chat"><b>Create or join a private room</b></a></div></div>
       </div>
     </div>
 
-    <div class="main-cards">
-      <div class="card"><a href="/scramble" class="nav-link">Play Scramble!!</a></div>
-      <div class="card"><a href="#" class="nav-link">songs</a></div>
-      <div class="card"><a href="#" class="nav-link">informations regaring covid</a></div>
+    <div class="main-overview" style="size: 2000px;">
+      <div class="overviewcard" style="size: 2000px;">
+        <div class="overviewcard__icon"><a  style="text-decoration: none; font-size: 40px; color: white;" href="/scramble"><b>Scramble</b></a></div>
+      </div>
+     
+      <div class="overviewcard">
+        <div class="overviewcard__icon"><a   style="text-decoration: none; font-size: 40px; color: white;"       href="/songs"><b>Stream music</b></a></div>
+      </div>
+      <div class="overviewcard">
+        <div class="overviewcard__icon"><a  style="text-decoration: none; font-size: 40px; color: white;"  href="/tictactoe"><b>Tic Tac Toe</b></a></div></div>
+      </div>
     </div>
-    {% endif %}
-  </main>
 
-  </div>
+    <!-- <div class="main-cards">
+      <div class="card" style="background-color:rgb(136, 71, 136);"><a  style="text-decoration: none; font-size: 40px; color: white;" href="/scramble" class="nav-link">Play Scramble!!</a></div>
+      <div class="card"><a  style="text-decoration: none; font-size: 40px; color: white;"  href="#" class="nav-link">songs</a></div>
+      <div class="card"><a  style="text-decoration: none; font-size: 40px; color: white;"  href="#" class="nav-link">informations regaring covid</a></div>
+    </div>
+     -->
+  
 
+  
+ </body>
+ </html>
  <script>
      const menuIconEl = $('.menu-icon');
 const sidenavEl = $('.sidenav');
