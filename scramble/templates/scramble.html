@@ -1,0 +1,17 @@
+<br>
+<br>
+score:{{score}}/{{total}}
+<br>
+<br>
+{{jum_word}}
+<br>
+<br>
+<form action="{% url 'check' %}" method="post">
+	{% csrf_token %}
+	<input type="text" name="answer" placeholder="Answer">
+	<button type="submit">Check</button>
+</form>
+<a class="btn btn-info" href="{% url 'next' %}" role="button">Next</a>
+<br>
+<br>
+{{ msg }}

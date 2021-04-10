@@ -4,6 +4,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+	path('scramble/', include('scramble.urls')),
     path('chat/', include('chat.urls')),
     path('account/', include('UserHandle.urls')),
     path('admin/', admin.site.urls),
