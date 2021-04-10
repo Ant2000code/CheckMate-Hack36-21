@@ -7,7 +7,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	path('scramble/', include('scramble.urls')),
+
 	path('songs/', include('music_nation.urls')),
+
     path('chat/', include('chat.urls')),
     path('Call/', include('OneToOneCallChat.urls')),
     path('account/', include('UserHandle.urls')),

@@ -3,17 +3,13 @@
 {%block title%}
 {%endblock%}
 {%block content%}
+
 <pre style="font-size: large;font-weight:bold;margin-left: 20px;margin-top: 20px;text-align: center;">
   This is a music Player especially meant to release all your stress from this Hackathon in the entire 30 hrs.
   You can add albums as per your wish and all well as listen to the albums of other users as well. 
 This helps in better understanding between the friends about the taste of music they have and the taste of music you have.
   Do give it a Try. Hope you love it.
-<!-- SUDO username : bunny
-password : bunny@123
-email : bunny@carrots.com
 
-artists password : artist@123
-artist username : &lt;capitalized_artist_first_name&gt;_&lt;capitalized_artist_last_name&gt; -->
 </pre><hr/>
 <div>
   <ul class="home-list">
@@ -22,8 +18,10 @@ artist username : &lt;capitalized_artist_first_name&gt;_&lt;capitalized_artist_l
         <span><a class="home-a" href="{% url 'music_nation:album_detail' username=album.album_artist album=album.album_name %}">
           <img src="{{ album.album_logo.url }}" style="width:100px">
         </a></span>
+
          <span style="color:#36485c;">{{album.album_name}} by</span>
         <a class="home-a" href="{% url 'music_nation:profile_detail' username=album.album_artist %}" style="font-weight: bold;">
+
           {{album.album_artist}}
         </a>
       </li><hr/>
