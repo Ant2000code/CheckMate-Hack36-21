@@ -8,11 +8,15 @@
 
 	<ul>
     <li><a href="#" class="nav-link">Home</a></li>
-    <li><a href="/about" class="nav-link"><em>About</em></a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
     <li><a href="#" class="nav-link">FAQ</a></li>
     <li><a href="/contactus" class="nav-link">Contact Us</a></li>
-    <li><a href="/login" class="nav-link">Logout</a></li>
-
+    {% if user.is_authenticated %}
+    <li><a href="/account/logout" class="nav-link">Logout</a></li>
+    {% else %}
+    <li><a href="/account/login" class="nav-link">Login</a></li>
+    <li><a href="/account/signup" class="nav-link">Signup</a></li>
+    {% endif %}
 	<!--<a class="navbar-brand" href="#">
     <img style="width:40px;" src="{% static 'logo1.png' %}">
 	</a> -->
@@ -28,26 +32,26 @@
       <div class="main-header__updates">Recent Items</div>
     </div>
 
+    {% if user.is_authenticated %}
     <div class="main-overview">
       <div class="overviewcard">
-        <div class="overviewcard__icon"><a href="#" class="nav-link">call</a></div>
+        <div class="overviewcard__icon"><a href="/Call">One-To-One Call</a></div>
+      </div>
+     
+      <div class="overviewcard">
+        <div class="overviewcard__icon"><a href="/chat/lobby">Public Chat</a></div>
       </div>
       <div class="overviewcard">
-        <div class="overviewcard__icon"><a href="#" class="nav-link">video call</a></div>
-      </div>
-      <div class="overviewcard">
-        <div class="overviewcard__icon">public chat</div>
-      </div>
-      <div class="overviewcard">
-        <div class="overviewcard__icon">private chat</div>
+        <div class="overviewcard__icon"><a href="/chat">Create or join a private room</a></div>
       </div>
     </div>
 
     <div class="main-cards">
-      <div class="card"><a href="#" class="nav-link">games</a></div>
+      <div class="card"><a href="/scramble" class="nav-link">Play Scramble!!</a></div>
       <div class="card"><a href="#" class="nav-link">songs</a></div>
       <div class="card"><a href="#" class="nav-link">informations regaring covid</a></div>
     </div>
+    {% endif %}
   </main>
 
   </div>
