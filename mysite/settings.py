@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'chat',
     'UserHandle',
     'scramble',
+    'music_nation',
     'OneToOneCallChat',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +50,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates'),os.path.join(BASE_DIR, 'scramble', 'templates', 'scramble'),],
+        'DIRS': [os.path.join(BASE_DIR,'templates'),os.path.join(BASE_DIR, 'scramble', 'templates', 'scramble'),os.path.join(BASE_DIR, 'music_nation', 'templates', 'music_nation'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,5 +125,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR, 'static')]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -20,3 +20,7 @@ def contactus(request):
 
 def home(request):
     return render(request, 'home.html')
+
+
+def tictactoe(request):
+    return render(request, 'tictactoe.html')
