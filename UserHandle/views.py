@@ -20,7 +20,7 @@ def login(request):
 
         if user is not None:
             auth.login(request,user)
-            return redirect('/chat')
+            return redirect('/home')
 
         else:
             messages.info(request,'invalid credentials')
@@ -41,25 +41,22 @@ def signup(request):
         if password1 == password2:
             if User.objects.filter(username=username).exists():
                 messages.info(request, 'username taken')
-                return redirect('/register')
+                return redirect('/signup')
             elif User.objects.filter(email=email).exists():
                 messages.info(request, 'email taken')
                 return redirect('/signup')
             else:
                 user = User.objects.create_user(username=username, password=password1, email=email)
                 user.save()
-                detail = Detail.objects.create(
-                    userName=username,
+               
 
-                )
-
-                detail.save()
-                subject = 'Registration done successfully'
-                message = f'Hi {user.username}, thank you for registering with Ask me Anything.'
-                email_from = settings.EMAIL_HOST_USER
-                recipient_list = [user.email, ]
-                send_mail(subject, message, email_from, recipient_list)
-                print('user created')
+                # detail.save()
+                # subject = 'Registration done successfully'
+                # message = f'Hi {user.username}, thank you for registering with Ask me Anything.'
+                # email_from = settings.EMAIL_HOST_USER
+                # recipient_list = [user.email, ]
+                # send_mail(subject, message, email_from, recipient_list)
+                # print('user created')
                 return redirect('login')
 
         else:
