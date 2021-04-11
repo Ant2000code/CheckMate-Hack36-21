@@ -14,7 +14,7 @@ An interactive web app to socialize people made by team "CheckMate" for Hack36 2
   <a href="https://youtu.be/dQw4w9WgXcQ">https://youtu.be/KeWaYKpSp0Y</a>
   
 ## Presentation Link:
-  <a href="https://docs.google.com/presentation/d/1NEbqpM6J6UkmHN_J6NsgOhKvDU6fkfnli4OIg1lh-pk/edit?usp=sharing"> ppt link here </a>
+  <a href="https://docs.google.com/presentation/d/1Nc8oQ0fcNyjN6tQJ1ukUo-G4RA85bNO0RJdhT3HAXW4/edit?usp=sharing"> ppt link here </a>
   
   
 ## Table of Contents:
